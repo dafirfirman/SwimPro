@@ -17,7 +17,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // Background biru
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -30,11 +29,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
             ),
           ),
-          // Kotak putih dengan border radius di bagian bawah kanan
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-              height: 340, // Sesuaikan tinggi kontainer sesuai kebutuhan
+              height: 340,
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Colors.white,
@@ -44,7 +42,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               child: Stack(
                 children: [
-                  // Teks "Halaman Register" di kiri atas
                   Positioned(
                     top: 50,
                     left: 20,
@@ -73,8 +70,8 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         ],
                       ),
                       child: Image.asset(
-                        'assets/img/logo.png', // Path logo Anda
-                        fit: BoxFit.contain, // Sesuaikan logo dengan kontainer
+                        'assets/img/logo.png',
+                        fit: BoxFit.contain, 
                       ),
                     ),
                   ),
@@ -82,16 +79,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
             ),
           ),
-          // Konten halaman register
           Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  const SizedBox(height: 300), // Sesuaikan jarak untuk kotak putih
+                  const SizedBox(height: 300), 
                   const SizedBox(height: 20),
-                  // Kotak putih untuk input email
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                     decoration: BoxDecoration(
@@ -117,7 +112,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  // Kotak putih untuk input password
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                     decoration: BoxDecoration(
@@ -155,7 +149,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   const SizedBox(height: 15),
-                  // Kotak putih untuk input konfirmasi password
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                     decoration: BoxDecoration(
@@ -193,15 +186,13 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  // Register Button
                   ElevatedButton(
                     onPressed: () {
-                      // Tambahkan logika register di sini
                     },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 50),
-                      backgroundColor: const Color.fromARGB(255, 3, 28, 139), // Warna tombol register
-                      foregroundColor: Colors.white, // Warna teks tombol register
+                      backgroundColor: const Color.fromARGB(255, 3, 28, 139), 
+                      foregroundColor: Colors.white, 
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -209,7 +200,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     child: const Text('Register', style: TextStyle(fontWeight: FontWeight.w900)),
                   ),
                   const SizedBox(height: 20),
-                  // Sudah memiliki akun? Login
                   Align(
                     alignment: Alignment.centerRight,
                     child: RichText(
