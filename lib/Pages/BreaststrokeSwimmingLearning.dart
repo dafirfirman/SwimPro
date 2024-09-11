@@ -22,13 +22,13 @@ class _BreaststrokeSwimmingLearningState extends State<BreaststrokeSwimmingLearn
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 225, 255), // Warna latar belakang AppBar
+        backgroundColor: Color.fromARGB(255, 0, 225, 255),
         elevation: 0,
         automaticallyImplyLeading: false,
         title: Row(
           children: [
             Image.asset(
-              'assets/img/logo.png', // Ganti dengan path logo Anda
+              'assets/img/logo.png', // path logo
               width: 40,
               height: 40,
             ),
@@ -60,7 +60,6 @@ class _BreaststrokeSwimmingLearningState extends State<BreaststrokeSwimmingLearn
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // DropdownButton untuk kategori
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               decoration: BoxDecoration(
@@ -81,7 +80,6 @@ class _BreaststrokeSwimmingLearningState extends State<BreaststrokeSwimmingLearn
                 },
                 items: <String>[
                   'Pembelajaran Renang Gaya Dada',
-                  // Tambahkan kategori lain jika diperlukan
                 ].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
