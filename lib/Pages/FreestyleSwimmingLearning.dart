@@ -21,13 +21,13 @@ class _FreestyleSwimmingLearningState extends State<FreestyleSwimmingLearning> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 225, 255), // Warna latar belakang AppBar
+        backgroundColor: Color.fromARGB(255, 0, 225, 255), 
         elevation: 0,
         automaticallyImplyLeading: false,
         title: Row(
           children: [
             Image.asset(
-              'assets/img/logo.png', // Ganti dengan path logo Anda
+              'assets/img/logo.png', // path logo 
               width: 40,
               height: 40,
             ),
@@ -59,7 +59,6 @@ class _FreestyleSwimmingLearningState extends State<FreestyleSwimmingLearning> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // DropdownButton untuk kategori (hanya sebagai placeholder)
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               decoration: BoxDecoration(
@@ -80,7 +79,6 @@ class _FreestyleSwimmingLearningState extends State<FreestyleSwimmingLearning> {
                 },
                 items: <String>[
                   'Pembelajaran Renang Gaya Bebas',
-                  // Tambahkan kategori lain jika diperlukan
                 ].map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,
@@ -90,7 +88,6 @@ class _FreestyleSwimmingLearningState extends State<FreestyleSwimmingLearning> {
               ),
             ),
             const SizedBox(height: 20),
-            // Daftar item
             Expanded(
               child: ListView(
                 children: _items.map((item) {
