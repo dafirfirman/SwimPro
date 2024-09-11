@@ -78,7 +78,7 @@ class _HomePageState extends State<HomePage> {
                 onChanged: (String? newValue) {
                   setState(() {
                     _selectedCategory = newValue!;
-                    _navigateToCategory(newValue); // Panggil fungsi navigasi
+                    _navigateToCategory(newValue);
                   });
                 },
                 items: _categories.map<DropdownMenuItem<String>>((String value) {
