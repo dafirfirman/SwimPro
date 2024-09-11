@@ -7,8 +7,8 @@ class ForgotPasswordScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromARGB(255, 0, 225, 255), // Warna latar belakang AppBar
-        elevation: 0, // Menghilangkan bayangan di bawah AppBar
+        backgroundColor: Color.fromARGB(255, 0, 225, 255),
+        elevation: 0,
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () {
@@ -23,7 +23,7 @@ class ForgotPasswordScreen extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-        centerTitle: true, // Membuat judul di tengah
+        centerTitle: true,
       ),
       body: Container(
         width: double.infinity,
@@ -45,8 +45,7 @@ class ForgotPasswordScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                const SizedBox(height: 20), // Tambahkan jarak antara AppBar dan input email
-                // Kotak putih untuk input email
+                const SizedBox(height: 20), 
                 Container(
                   padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 2),
                   decoration: BoxDecoration(
@@ -75,10 +74,8 @@ class ForgotPasswordScreen extends StatelessWidget {
                   ),
                 ),
                 const SizedBox(height: 20),
-                // Button untuk mengirim link reset password
                 ElevatedButton(
                   onPressed: () {
-                    // Tambahkan logika untuk mengirim link reset password
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(
                         content: Text(
@@ -92,8 +89,8 @@ class ForgotPasswordScreen extends StatelessWidget {
                   },
                   style: ElevatedButton.styleFrom(
                     minimumSize: const Size(double.infinity, 50),
-                    backgroundColor: const Color.fromARGB(255, 3, 28, 139), // Warna tombol
-                    foregroundColor: Colors.white, // Warna teks tombol
+                    backgroundColor: const Color.fromARGB(255, 3, 28, 139), 
+                    foregroundColor: Colors.white, 
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25),
                     ),
