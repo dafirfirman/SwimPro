@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:swimpro/Pages/BreaststrokeSwimmingLearning.dart'; // Ganti dengan path yang sesuai
-import 'package:swimpro/Pages/FreestyleSwimmingLearning.dart'; // Ganti dengan path yang sesuai
+import 'package:swimpro/Pages/BreaststrokeSwimmingLearning.dart'; 
+import 'package:swimpro/Pages/FreestyleSwimmingLearning.dart'; 
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -24,13 +24,13 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 225, 255), // Warna latar belakang AppBar
+        backgroundColor: const Color.fromARGB(255, 0, 225, 255), 
         elevation: 0,
         automaticallyImplyLeading: false,
         title: Row(
           children: [
             Image.asset(
-              'assets/img/logo.png', // Ganti dengan path logo Anda
+              'assets/img/logo.png', //  path logo 
               width: 40,
               height: 40,
             ),
@@ -62,7 +62,6 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // DropdownButton untuk kategori
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 12.0),
               decoration: BoxDecoration(
@@ -96,7 +95,6 @@ class _HomePageState extends State<HomePage> {
     );
   }
 
-  // Fungsi untuk navigasi ke halaman yang sesuai
   void _navigateToCategory(String category) {
     if (category == 'Pembelajaran Renang Gaya Dada') {
       Navigator.push(
@@ -113,9 +111,7 @@ class _HomePageState extends State<HomePage> {
         ),
       );
     } else if (category == 'Keselamatan Didalam Air') {
-      // Tambahkan navigasi ke halaman lain jika diperlukan
     } else if (category == 'Catatan Kecil') {
-      // Tambahkan navigasi ke halaman lain jika diperlukan
     }
   }
 }
