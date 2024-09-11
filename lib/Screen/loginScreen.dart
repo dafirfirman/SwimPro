@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:swimpro/Screen/registerScreen.dart';
-import 'package:swimpro/Screen/forgot_password_screen.dart'; // Pastikan path ini benar sesuai struktur proyek Anda
+import 'package:swimpro/Screen/forgot_password_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -18,7 +18,6 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: Stack(
         children: [
-          // Background biru
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
@@ -31,11 +30,10 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          // Kotak putih dengan border radius di bagian bawah kanan
           Align(
             alignment: Alignment.topCenter,
             child: Container(
-              height: 340, // Sesuaikan tinggi kontainer sesuai kebutuhan
+              height: 340, 
               width: double.infinity,
               decoration: const BoxDecoration(
                 color: Colors.white,
@@ -45,9 +43,8 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
               child: Stack(
                 children: [
-                  // Teks "Halaman Login" di kiri atas
                   Positioned(
-                    top: 50, // Jarak dari atas
+                    top: 50,
                     left: 20,
                     child: const Text(
                       'Halaman Login',
@@ -58,13 +55,12 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                     ),
                   ),
-                  // Logo di tengah
                   Center(
                     child: Container(
                       width: 100,
                       height: 100,
                       decoration: BoxDecoration(
-                        color: Colors.white, // Background putih untuk logo
+                        color: Colors.white,
                         boxShadow: [
                           BoxShadow(
                             color: Colors.black.withOpacity(0.1),
@@ -74,8 +70,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         ],
                       ),
                       child: Image.asset(
-                        'assets/img/logo.png', // Path logo Anda
-                        fit: BoxFit.contain, // Sesuaikan logo dengan kontainer
+                        'assets/img/logo.png', 
+                        fit: BoxFit.contain, 
                       ),
                     ),
                   ),
@@ -83,20 +79,18 @@ class _LoginScreenState extends State<LoginScreen> {
               ),
             ),
           ),
-          // Konten halaman login
           Center(
             child: SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 30.0),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start, // Sejajarkan teks ke kiri
+                crossAxisAlignment: CrossAxisAlignment.start, 
                 children: <Widget>[
-                  const SizedBox(height: 300), // Sesuaikan jarak untuk kotak putih
+                  const SizedBox(height: 300), 
                   const Text(
                     'Masukkan email dan password anda!',
                     style: TextStyle(fontSize: 16, color: Colors.black),
                   ),
                   const SizedBox(height: 20),
-                  // Kotak putih untuk input email
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                     decoration: BoxDecoration(
@@ -116,13 +110,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         prefixIcon: const Icon(Icons.email, color: Color(0xFF007BFF)),
                         hintText: 'Email',
                         hintStyle: const TextStyle(color: Colors.black),
-                        contentPadding: const EdgeInsets.symmetric(vertical: 15), // Atur padding vertikal
+                        contentPadding: const EdgeInsets.symmetric(vertical: 15), 
                       ),
                       style: const TextStyle(color: Colors.black),
                     ),
                   ),
                   const SizedBox(height: 15),
-                  // Kotak putih untuk input password
                   Container(
                     padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 0),
                     decoration: BoxDecoration(
@@ -154,7 +147,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         hintText: 'Password',
                         hintStyle: const TextStyle(color: Colors.black),
-                        contentPadding: const EdgeInsets.symmetric(vertical: 15), // Atur padding vertikal
+                        contentPadding: const EdgeInsets.symmetric(vertical: 15), 
                       ),
                       style: const TextStyle(color: Colors.black),
                     ),
@@ -178,15 +171,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  // Login Button
                   ElevatedButton(
                     onPressed: () {
-                      // Tambahkan logika login di sini
                     },
                     style: ElevatedButton.styleFrom(
                       minimumSize: const Size(double.infinity, 50),
-                      backgroundColor: const Color.fromARGB(255, 3, 28, 139), // Warna tombol login
-                      foregroundColor: Colors.white, // Warna teks tombol login
+                      backgroundColor: const Color.fromARGB(255, 3, 28, 139), 
+                      foregroundColor: Colors.white,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(8),
                       ),
@@ -194,7 +185,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: const Text('Login', style: TextStyle(fontWeight: FontWeight.w900)),
                   ),
                   const SizedBox(height: 20),
-                  // Don't have an account? Register with different colors
                   Align(
                     alignment: Alignment.centerRight,
                     child: RichText(
